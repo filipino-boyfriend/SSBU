@@ -1,259 +1,526 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Filipino Boyfriend – Super Smash Bros. Ultimate Player</title>
+<title>Filipino Boyfriend – Super Smash Bros. Ultimate Player</title>
+<meta name="description" content="Filipino-American Super Smash Bros. Ultimate player from San Diego, California.">
 
-  <meta name="description" content="Filipino Boyfriend is a Filipino-American Super Smash Bros. Ultimate player from San Diego, California, known for Pac-Man, Ness, and Pit.">
+<meta property="og:title" content="Filipino Boyfriend">
+<meta property="og:description" content="Super Smash Bros. Ultimate Player from San Diego, California.">
+<meta property="og:type" content="website">
 
-  <meta property="og:title" content="Filipino Boyfriend – Super Smash Bros. Ultimate Player">
-  <meta property="og:description" content="Competitive Super Smash Bros. Ultimate player from San Diego, California.">
-  <meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Filipino Boyfriend",
-    "alternateName": ["PSIPSY", "Honor"],
-    "description": "Filipino-American Super Smash Bros. Ultimate and Super Smash Flash 2 player from San Diego, California.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "San Diego",
-      "addressRegion": "California",
-      "addressCountry": "United States"
-    },
-    "sameAs": [
-      "https://www.start.gg/user/58c2ad11",
-      "https://www.supermajor.gg/ultimate/player/Filipino%20Boyfriend?id=S4843287",
-      "https://www.ssbwiki.com/User:Filipino_Boyfriend"
-    ]
+<style>
+:root{
+  --bg:#040510;
+  --card:rgba(255,255,255,.07);
+  --border:rgba(255,255,255,.1);
+  --text:#ffffff;
+  --muted:#b9bfd3;
+  --blue:#4ec9ff;
+  --purple:#9f6bff;
+  --gold:#ffd54a;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Inter,sans-serif;
+  background:
+      radial-gradient(circle at 15% 20%, rgba(159,107,255,.35), transparent 30%),
+      radial-gradient(circle at 85% 30%, rgba(78,201,255,.30), transparent 30%),
+      radial-gradient(circle at 50% 100%, rgba(255,213,74,.10), transparent 40%),
+      var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,.03),
+      transparent
+    );
+  animation:shine 12s linear infinite;
+  pointer-events:none;
+}
+
+@keyframes shine{
+  from{
+    transform:translateX(-100%);
   }
-  </script>
+  to{
+    transform:translateX(100%);
+  }
+}
 
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-      line-height: 1.7;
-      color: #222;
-    }
+.stars{
+  position:fixed;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
+}
 
-    header {
-      margin-bottom: 30px;
-    }
+.star{
+  position:absolute;
+  width:2px;
+  height:2px;
+  background:white;
+  border-radius:50%;
+  opacity:.5;
+  animation:float 8s ease-in-out infinite;
+}
 
-    .profile {
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 24px;
-      margin-top: 20px;
-      margin-bottom: 30px;
-    }
+@keyframes float{
+  50%{
+    transform:translateY(-25px);
+    opacity:1;
+  }
+}
 
-    .photo {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      overflow: hidden;
-      text-align: center;
-      background: #f8f8f8;
-    }
+.container{
+  width:min(1150px,92%);
+  margin:auto;
+}
 
-    .photo img {
-      width: 100%;
-      display: block;
-    }
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+}
 
-    .caption {
-      padding: 10px;
-      font-size: 14px;
-      color: #666;
-    }
+.hero h1{
+  font-family:Orbitron,sans-serif;
+  font-size:clamp(3rem,10vw,7rem);
+  line-height:.95;
+  margin-bottom:25px;
+  background:
+      linear-gradient(
+          90deg,
+          #fff,
+          var(--blue),
+          var(--purple)
+      );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
 
-    .infobox {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 20px;
-      background: #fafafa;
-    }
+.hero p{
+  color:var(--muted);
+  font-size:1.3rem;
+  max-width:700px;
+  margin:auto;
+}
 
-    .infobox p {
-      margin: 8px 0;
-    }
+.tag{
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  border:1px solid var(--border);
+  margin-bottom:30px;
+  color:var(--blue);
+}
 
-    h1 {
-      margin-bottom: 5px;
-    }
+.button{
+  display:inline-block;
+  margin-top:40px;
+  padding:16px 34px;
+  border-radius:999px;
+  background:
+      linear-gradient(
+          90deg,
+          var(--blue),
+          var(--purple)
+      );
+  color:white;
+  text-decoration:none;
+  font-weight:700;
+  transition:.3s;
+}
 
-    h2 {
-      margin-top: 40px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 8px;
-    }
+.button:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
 
-    ul {
-      padding-left: 20px;
-    }
+.card{
+  background:var(--card);
+  backdrop-filter:blur(30px);
+  border:1px solid var(--border);
+  border-radius:35px;
+  padding:40px;
+  box-shadow:
+      0 25px 80px rgba(0,0,0,.35);
+}
 
-    a {
-      color: #0057b8;
-      text-decoration: none;
-    }
+.profile{
+  display:grid;
+  grid-template-columns:350px 1fr;
+  gap:40px;
+  margin-bottom:80px;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+.photo img{
+  width:100%;
+  border-radius:25px;
+}
 
-    footer {
-      margin-top: 50px;
-      font-size: 13px;
-      color: #777;
-      border-top: 1px solid #ddd;
-      padding-top: 20px;
-    }
+.caption{
+  margin-top:20px;
+  color:var(--muted);
+  text-align:center;
+}
 
-    @media (max-width: 700px) {
-      .profile {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+h2{
+  font-family:Orbitron;
+  font-size:2rem;
+  margin-bottom:30px;
+}
+
+section{
+  margin-bottom:60px;
+}
+
+.infobox p{
+  margin-bottom:18px;
+  color:var(--muted);
+}
+
+.timeline{
+  position:relative;
+  padding-left:35px;
+}
+
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:8px;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:rgba(255,255,255,.15);
+}
+
+.timeline-item{
+  position:relative;
+  margin-bottom:45px;
+}
+
+.timeline-item::before{
+  content:"";
+  position:absolute;
+  left:-34px;
+  top:7px;
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  background:var(--blue);
+  box-shadow:
+      0 0 20px var(--blue);
+}
+
+.timeline-item span{
+  color:var(--blue);
+  font-weight:700;
+}
+
+.timeline-item h3{
+  margin-top:10px;
+  font-size:1.1rem;
+}
+
+.timeline-item p{
+  margin-top:10px;
+  color:var(--muted);
+}
+
+.results{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.result{
+  text-align:center;
+  transition:.3s;
+}
+
+.result:hover{
+  transform:translateY(-10px);
+}
+
+.result .place{
+  font-size:3rem;
+}
+
+.result h3{
+  margin:15px 0;
+}
+
+.result p{
+  color:var(--muted);
+}
+
+.links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.link{
+  text-decoration:none;
+  color:white;
+  background:rgba(255,255,255,.06);
+  border:1px solid var(--border);
+  padding:16px 24px;
+  border-radius:20px;
+  transition:.3s;
+}
+
+.link:hover{
+  transform:translateY(-5px);
+  background:rgba(255,255,255,.12);
+}
+
+footer{
+  text-align:center;
+  padding:100px 0 60px;
+  color:var(--muted);
+}
+
+.reveal{
+  opacity:0;
+  transform:translateY(50px);
+  transition:1s;
+}
+
+.reveal.show{
+  opacity:1;
+  transform:none;
+}
+
+@media(max-width:900px){
+  .profile{
+    grid-template-columns:1fr;
+  }
+
+  .card{
+    padding:30px;
+  }
+
+  .hero{
+    padding:120px 0;
+  }
+}
+</style>
 </head>
 <body>
 
-<header>
-  <h1>Filipino Boyfriend</h1>
-  <p><strong>Super Smash Bros. Ultimate player from San Diego, California.</strong></p>
+<div class="stars"></div>
 
-  <p>
-    Formerly known as <strong>PSIPSY</strong> and <strong>Honor</strong>,
-    Filipino Boyfriend is a Filipino-American competitor known for playing
-    Pac-Man, Ness, and Pit in Super Smash Bros. Ultimate and Pac-Man in
-    Super Smash Flash 2.
-  </p>
+<header class="hero">
+  <div class="container">
+    <div class="tag">Super Smash Bros. Ultimate Player</div>
+
+    <h1>FILIPINO<br>BOYFRIEND</h1>
+
+    <p>
+      Filipino-American competitor from San Diego, California.<br>
+      Pac-Man • Ness • Pit
+    </p>
+
+    <a href="#about" class="button">View Career</a>
+  </div>
 </header>
 
-<div class="profile">
+<main class="container">
 
-  <div class="photo">
-    <img src="FilipinoBoyfriend.jpg" alt="Filipino Boyfriend competing for Aztec Esports">
-    <div class="caption">
-      Filipino Boyfriend competing for Aztec Esports at San Diego State University.
-    </div>
+<section id="about" class="profile reveal">
+
+<div class="card photo">
+  <img src="FilipinoBoyfriend.jpg"
+       alt="Filipino Boyfriend competing for Aztec Esports">
+
+  <div class="caption">
+    Competing for Aztec Esports at San Diego State University.
   </div>
-
-  <div class="infobox">
-    <p><strong>Location:</strong> San Diego, California, United States</p>
-    <p><strong>Main Characters:</strong> Pac-Man, Ness</p>
-    <p><strong>Secondary Characters:</strong> Pit, Ice Climbers</p>
-    <p><strong>Current Crew:</strong> Aztec Esports SSBU</p>
-    <p><strong>Former Crews:</strong> PlayRiDise (SSF2), Peacekeepers (Flash Party)</p>
-    <p><strong>Former Tags:</strong> PSIPSY, Honor</p>
-    <p><strong>Highest Ranking:</strong> 1st – Scripps Ranch Power League Rankings</p>
-  </div>
-
 </div>
 
-<section>
-  <h2>Overview</h2>
+<div class="card infobox">
+  <h2>Player Profile</h2>
+
+  <p><strong>Location:</strong> San Diego, California</p>
+  <p><strong>Main Characters:</strong> Pac-Man, Ness</p>
+  <p><strong>Secondary:</strong> Pit, Ice Climbers</p>
+  <p><strong>Current Crew:</strong> Aztec Esports SSBU</p>
+  <p><strong>Former Crews:</strong> PlayRiDise, Peacekeepers</p>
+  <p><strong>Former Tags:</strong> PSIPSY, Honor</p>
+  <p><strong>Highest Ranking:</strong> #1 Scripps Ranch Power League</p>
+
+  <br>
 
   <p>
-    Filipino Boyfriend is a Filipino-American Super Smash Bros. Ultimate player
-    based in San Diego, California. He has competed in grassroots and collegiate
-    events and currently represents Aztec Esports at San Diego State University.
+    Competitive Super Smash Bros. Ultimate player, commentator,
+    and community organizer based in Southern California.
   </p>
+</div>
+
 </section>
 
-<section>
-  <h2>Super Smash Flash 2</h2>
+<section class="card reveal">
+  <h2>Career Timeline</h2>
 
-  <p>
-    Filipino Boyfriend began competing in community crew battles in 2019 before
-    transitioning to online tournament play in 2020 under the tag PSIPSY,
-    primarily using Pac-Man.
-  </p>
+  <div class="timeline">
 
-  <p>
-    His most notable result was a first-place finish at ARSC Smash Strike 2020.
-    He also qualified for the Oasis Invitational Bracket and competed against
-    several of the game's top players.
-  </p>
+    <div class="timeline-item">
+      <span>2019</span>
+      <h3>Began competing in community crew battles.</h3>
+    </div>
+
+    <div class="timeline-item">
+      <span>2020</span>
+      <h3>Won ARSC Smash Strike 2020.</h3>
+      <p>Established himself as a top Pac-Man player in SSF2.</p>
+    </div>
+
+    <div class="timeline-item">
+      <span>2022</span>
+      <h3>Founded Peacekeepers in Flash Party.</h3>
+    </div>
+
+    <div class="timeline-item">
+      <span>2024</span>
+      <h3>Returned to the San Diego Ultimate scene.</h3>
+    </div>
+
+    <div class="timeline-item">
+      <span>2025–2026</span>
+      <h3>Competed for Aztec Esports at SDSU.</h3>
+    </div>
+
+  </div>
 </section>
 
-<section>
-  <h2>Flash Party</h2>
-
-  <p>
-    He was active in the North American Flash Party community during 2022–2023,
-    founding the Peacekeepers crew and contributing to early grassroots
-    competitive activity.
-  </p>
-
-  <p>
-    He achieved multiple top eight placements in online community events.
-  </p>
-</section>
-
-<section>
-  <h2>Super Smash Bros. Ultimate</h2>
-
-  <p>
-    From 2019 to 2023, he competed primarily in the Scripps Ranch Power League,
-    a high school tournament circuit that he helped co-organize. During this
-    period, he won multiple events and finished ranked first overall.
-  </p>
-
-  <p>
-    Following a competitive hiatus after graduating in 2023, he returned to the
-    San Diego Ultimate scene in late 2024 while attending San Diego State
-    University and later joined the university's Aztec Esports team.
-  </p>
-
-  <p>
-    Since returning to competition, he has competed primarily at Aztec Games
-    events and other Southern California tournaments, including a ninth-place
-    finish at Aztec Spring Games 2026.
-  </p>
-</section>
-
-<section>
+<section class="card reveal">
   <h2>Notable Results</h2>
 
-  <ul>
-    <li>1st – ARSC Smash Strike 2020 (SSF2)</li>
-    <li>1st – Scripps Ranch Power League Rankings</li>
-    <li>4th – Aztec Spring Games 2025 (SSBU)</li>
-    <li>9th – Aztec Spring Games 2026 (SSBU)</li>
-  </ul>
+  <div class="results">
+
+    <div class="card result">
+      <div class="place">🥇</div>
+      <h3>1st Place</h3>
+      <p>ARSC Smash Strike 2020</p>
+    </div>
+
+    <div class="card result">
+      <div class="place">🥇</div>
+      <h3>1st Place</h3>
+      <p>Scripps Ranch Power League Rankings</p>
+    </div>
+
+    <div class="card result">
+      <div class="place">🏅</div>
+      <h3>4th Place</h3>
+      <p>Aztec Spring Games 2025</p>
+    </div>
+
+    <div class="card result">
+      <div class="place">🏅</div>
+      <h3>9th Place</h3>
+      <p>Aztec Spring Games 2026</p>
+    </div>
+
+  </div>
 </section>
 
-<section>
-  <h2>Community Involvement</h2>
+<section class="card reveal">
+  <h2>Community</h2>
 
-  <p>
-    Outside of competition, Filipino Boyfriend has provided commentary for SSF2,
-    Flash Party, and Aztec Games events in Southern California.
+  <p style="color:var(--muted); line-height:1.8;">
+    Outside of competition, Filipino Boyfriend has provided
+    commentary for SSF2, Flash Party, and Aztec Games events
+    throughout Southern California while helping organize and
+    support local grassroots communities.
   </p>
 </section>
 
-<section>
+<section class="card reveal">
   <h2>External Links</h2>
 
-  <ul>
-    <li><a href="https://www.start.gg/user/58c2ad11" target="_blank">start.gg Profile</a></li>
-    <li><a href="https://www.supermajor.gg/ultimate/player/Filipino%20Boyfriend?id=S4843287" target="_blank">Supermajor Profile</a></li>
-    <li><a href="https://www.ssbwiki.com/User:Filipino_Boyfriend" target="_blank">Super Smash Bros. Wiki</a></li>
-    <li><a href="https://www.youtube.com/watch?v=jG0-SG2krbM" target="_blank">SSF2 Oasis Invitational Set</a></li>
-  </ul>
+  <div class="links">
+    <a class="link" href="https://www.start.gg/user/58c2ad11" target="_blank">
+      start.gg
+    </a>
+
+    <a class="link" href="https://www.supermajor.gg/ultimate/player/Filipino%20Boyfriend?id=S4843287" target="_blank">
+      Supermajor
+    </a>
+
+    <a class="link" href="https://www.ssbwiki.com/User:Filipino_Boyfriend" target="_blank">
+      SmashWiki
+    </a>
+
+    <a class="link" href="https://www.youtube.com/watch?v=jG0-SG2krbM" target="_blank">
+      Oasis Invitational Set
+    </a>
+  </div>
 </section>
 
+</main>
+
 <footer>
-  Competitive player profile page for Filipino Boyfriend.
+  Filipino Boyfriend • Super Smash Bros. Ultimate Player
 </footer>
+
+<script>
+const stars = document.querySelector('.stars');
+
+for(let i=0;i<120;i++){
+  const s=document.createElement('div');
+  s.className='star';
+  s.style.left=Math.random()*100+'vw';
+  s.style.top=Math.random()*100+'vh';
+  s.style.animationDelay=Math.random()*8+'s';
+  s.style.animationDuration=6+Math.random()*8+'s';
+  stars.appendChild(s);
+}
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{
+  threshold:.15
+});
+
+document.querySelectorAll('.reveal').forEach(el=>{
+  observer.observe(el);
+});
+</script>
 
 </body>
 </html>
